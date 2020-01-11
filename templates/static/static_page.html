@@ -1,0 +1,24 @@
+{% extends '../mixin.html' %}
+{% block content %}
+    <table class="table table-bordered">
+        <thead class="thead-light">
+        <tr class="active">
+            <th colspan="2"><h2>{{ static_page.title }}</h2></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                作成日: {{ static_page.created }}
+            </td>
+            <td>
+                最終更新日: {{ static_page.modified }}
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">{{ static_page.html_text | safe }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+{% endblock %}

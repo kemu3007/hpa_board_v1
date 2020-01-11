@@ -1,0 +1,72 @@
+<!doctype html>
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery="full" %}
+<html lang="ja">
+<head><title>HPA交流会</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">HPA交流会</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">概要</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">イベント一覧</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">交流会資料</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">協賛</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">お問い合わせ</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-sm-12 col-md-9">
+            {% block content %}
+            {% endblock %}
+            <div class="col-12">
+                {% bootstrap_button "twitterで共有する" button_type="submit" button_class="btn-primary" %}
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-3">
+            <table class="table table-bordered">
+                <tr>
+                    <td>
+                        サイト統計情報
+                        <hr>
+                        - アクセス数: 00000
+                    </td>
+                </tr>
+                <tr>
+                    <td><a class="twitter-timeline" data-lang="ja" data-height="1000"
+                           href="https://twitter.com/HPA_comu?ref_src=twsrc%5Etfw">Tweets by HPA_comu</a>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-12 text-center">
+            <hr>
+            © 2020 Copyright: k-murakawa<br>
+            powered by django
+        </div>
+    </div>
+</div>
+</body>
+</html>
